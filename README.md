@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🧠 Technical Challenge: Unive Chatbot
+Your task is to build an intelligent chatbot using Next.js and the Vercel AI SDK v5, deployed on
+Vercel and stored on GitHub.
 
-## Getting Started
+✅ Core Requirements
+● Built with Next.js and Vercel AI SDK v5 (Required)
+● Deployed on Vercel
+● Code hosted in a public GitHub repository
+● Chat agent powered by OpenAI’s Responses API
+● Includes at least one tool integration using the Vercel SDK
+● Chat history persists across sessions
+● Implements long-term memory: relevant information persists across conversations
 
-First, run the development server:
+✨ Bonus Points
+● Stream resumes after page refresh (without losing messages)
+● Stop streaming mid-response, preserving partially streamed messages
+● Preference for custom-built logic over using open-source wrappers (don't use Mem0)
+● Responsive, accessible UI with smooth animations and polished interactions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧰 Recommended Tech Stack
+● Next.js (Required)
+● Vercel AI SDK v5 (Required)
+● Drizzle ORM (Optional)
+● Neon Serverless Postgres (Optional)
+● Tailwind CSS (Optional)
+● Redis (Optional)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📤 Submission Instructions
+Please send all of the following to jonas@unive.ai, cc’ing martin@unive.ai:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Link to your deployed app
+2. Link to your GitHub repository
+3. Optionally include any additional instructions in the readme or the email itself
+   ⏰ Deadline
+   Please submit your solution within 4 days of receiving this task.

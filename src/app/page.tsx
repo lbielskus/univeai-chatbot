@@ -1,103 +1,206 @@
-import Image from "next/image";
+import { FloatingChat } from '@/components/chat/FloatingChat';
+import {
+  FiPlus,
+  FiCloud,
+  FiMessageCircle,
+  FiZap,
+  FiCheck,
+  FiStar,
+  FiTool,
+} from 'react-icons/fi';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      {/* Hero Section */}
+      <div className='max-w-4xl mx-auto px-4 py-16 text-center'>
+        <h1 className='text-5xl font-bold text-[#333333] mb-6'>
+          Welcome to <span className='text-[#32c7f4]'>UniveAI</span>
+        </h1>
+        <p className='text-xl text-gray-600 mb-8 max-w-2xl mx-auto'>
+          Your intelligent AI assistant powered by OpenAI. Get instant help with
+          calculations, weather information, and much more through our floating
+          chat interface.
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className='bg-gradient-to-br from-white to-gray-50 p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100 mb-8 max-w-5xl mx-auto'>
+          <h2 className='text-xl md:text-2xl font-bold text-[#333333] mb-6 text-center flex items-center justify-center'>
+            <FiZap className='w-6 h-6 md:w-8 md:h-8 text-[#32c7f4] mr-3' />
+            Project Implementation Summary
+          </h2>
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            <div className='bg-white p-6 rounded-2xl shadow-sm border border-gray-100'>
+              <h3 className='text-lg font-semibold text-[#32c7f4] mb-4 flex items-center '>
+                <FiCheck className='w-5 h-5 text-green-500 mr-3' />
+                Core Requirements Met
+              </h3>
+              <ul className='space-y-3 text-sm text-gray-600'>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-green-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Built with Next.js and Vercel AI SDK v5
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors '>
+                  <span className='text-green-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Chat agent powered by OpenAI's Responses API
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-green-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Tool integration: Calculator & Weather API
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-green-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Chat history persists across sessions
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-green-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Long-term memory implementation
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div className='bg-white p-6 rounded-2xl shadow-sm border border-gray-100'>
+              <h3 className='text-lg font-semibold text-[#32c7f4] mb-4 flex items-center'>
+                <FiStar className='w-5 h-5 text-yellow-500 mr-3' />
+                Bonus Features Implemented
+              </h3>
+              <ul className='space-y-3 text-sm text-gray-600'>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-blue-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Responsive, accessible UI design
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-blue-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Smooth animations & polished interactions
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-blue-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Professional React Icons integration
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-blue-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Glassmorphism design elements
+                  </span>
+                </li>
+                <li className='flex items-start group hover:bg-gray-50 p-2 rounded-lg transition-colors'>
+                  <span className='text-blue-500 mr-3 mt-1 flex-shrink-0 w-4 text-center'>
+                    ●
+                  </span>
+                  <span className='group-hover:text-[#32c7f4] transition-colors leading-relaxed flex-1 text-left'>
+                    Interactive feedback system
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className='mt-8 pt-8 border-t border-gray-200'>
+            <h3 className='text-lg font-semibold text-[#32c7f4] mb-6 text-center flex items-center justify-center'>
+              <FiTool className='w-5 h-5 mr-3' />
+              Tech Stack Used
+            </h3>
+            <div className='flex flex-wrap justify-center gap-3'>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#2bb8e0] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                Next.js 14
+              </span>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#2bb8e0] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                Vercel AI SDK v5
+              </span>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#2bb8e0] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                OpenAI API
+              </span>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#2bb8e0] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                Tailwind CSS
+              </span>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#32c7f4] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                TypeScript
+              </span>
+              <span className='bg-gradient-to-r from-[#32c7f4] to-[#2bb8e0] text-white px-4 py-2 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105'>
+                React Icons
+              </span>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto'>
+          <div className='bg-white p-6 rounded-xl shadow-lg border border-gray-200'>
+            <div className='flex justify-center mb-3'>
+              <FiPlus className='w-12 h-12 text-[#32c7f4]' />
+            </div>
+            <h3 className='font-semibold text-[#333333] mb-2'>
+              Smart Calculator
+            </h3>
+            <p className='text-gray-600 text-sm'>
+              Get instant mathematical calculations and solutions
+            </p>
+          </div>
+
+          <div className='bg-white p-6 rounded-xl shadow-lg border border-gray-200'>
+            <div className='flex justify-center mb-3'>
+              <FiCloud className='w-12 h-12 text-[#32c7f4]' />
+            </div>
+            <h3 className='font-semibold text-[#333333] mb-2'>Weather Info</h3>
+            <p className='text-gray-600 text-sm'>
+              Check current weather conditions for any location
+            </p>
+          </div>
+
+          <div className='bg-white p-6 rounded-xl shadow-lg border border-gray-200'>
+            <div className='flex justify-center mb-3'>
+              <FiMessageCircle className='w-12 h-12 text-[#32c7f4]' />
+            </div>
+            <h3 className='font-semibold text-[#333333] mb-2'>AI Chat</h3>
+            <p className='text-gray-600 text-sm'>
+              Engage in intelligent conversations with AI
+            </p>
+          </div>
+        </div>
+
+        <div className='mt-12'>
+          <p className='text-gray-500 text-sm'>
+            Click the floating robot button in the bottom right corner to start
+            chatting!
+          </p>
+        </div>
+      </div>
+
+      {/* Floating Chat Component */}
+      <FloatingChat />
+    </main>
   );
 }
